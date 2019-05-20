@@ -1,0 +1,174 @@
+<!-- Code written by Oladeji Sanyaolu - Login
+     Initial Date: 25/4/2019
+     Email: oladejisanyaolu@gmail.com
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <link rel="icon" type="image/png" href="#">
+
+        <!-- This could go to an external .css file -->
+        <style>
+            /*
+                Code written by Oladeji Sanyaolu - Login css
+            */
+
+            body
+            {
+                background-color: rgba(58, 56, 56, 0.5);
+            }
+            hr
+            { 
+                height: 100%;
+                display: block;
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                border-style: inset;
+                border-width: 1px;
+            }
+
+            .card
+            {
+                width:70%;
+                margin:10% auto;
+                display: inline-block;
+            }
+
+            .card-body
+            {
+                text-align: center;
+                display: inline-block;
+            }
+
+            .text-opacity
+            {
+                opacity: 0.5;
+            }
+
+            /* Just going to stick with keeping everything in the center */
+            .center-text
+            {
+                margin: 0px auto;
+                text-align: center;
+            }
+
+            /* This will keep the Social Login Stuff on the left */
+            .left-text
+            {
+                /*text-align: left;*/
+                margin-right: 65%;
+            }
+
+            /* This will keep the Email Login on the right */
+            .right-text
+            {
+                margin-left: 65%;
+            }
+
+        </style>
+
+        <style>
+            /*
+                Pulled from: http://cssdeck.com/labs/jwmv3hsv 
+            */
+
+            @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+            @import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+
+            [class*="fontawesome-"]:before {
+                font-family: 'FontAwesome', sans-serif;
+            }
+            .facebook {
+                background-color: #0079ce;
+                border: none;
+                border-radius: 0px 3px 3px 0px;
+                -moz-border-radius: 0px 3px 3px 0px;
+                -webkit-border-radius: 0px 3px 3px 0px;
+                color: #f4f4f4;
+                cursor: pointer;
+                height: 50px;
+                text-transform: uppercase;
+                width: 300px;
+            }
+            .twitter {
+                background-color: #1bb2e9;
+                border: none;
+                border-radius: 0px 3px 3px 0px;
+                -moz-border-radius: 0px 3px 3px 0px;
+                -webkit-border-radius: 0px 3px 3px 0px;
+                color: #f4f4f4;
+                cursor: pointer;
+                height: 50px;
+                text-transform: uppercase;
+                width: 300px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
+
+        <div class="card ">
+            <div class="card-body">
+                <h1 class="text-opacity"> Create New Account</h1>
+                <h4>Come join the <em>A-Team</em> community! Let's set up your account. Already have one? <a href="#"> Sign in here. </a> </h4>
+                <hr>
+
+                <!-- Social Content -->
+                <div class="center-text">
+                    <h3 class="text-opacity"> Why be old fashioned? Just sign in with: </h3><br>
+
+                    <!--<div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div> --> <!-- Button for login with facebook-->
+                    <button class="facebook"><span class="fontawesome-facebook"></span> Login Using Facbook</button></p>
+                    <button class="twitter"><span class="fontawesome-twitter"></span> Login Using Twitter</button></p>
+                </div>
+
+                
+                <p><hr></p>
+                
+
+                <!-- Email Content -->
+                <h3 class="text-opacity center-text"> Have an account? </h3><br>
+                <form action="#" method="POST">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend"></div>
+                        <input type="text" class="form-control" required name="user" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend"></div>
+                        <input type="email" class="form-control" required name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend"></div>
+                        <input type="password" class="form-control" required name="pass" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+                    </div>
+
+                    <h5 class="text-opacity">By submitting this form you agree to <em> A-Team </em> <a href="#"> Terms and service </a></h5>
+                    <button type="button" class="btn btn-secondary btn-lg">Join A-Team</button>
+
+                </form>
+
+            </div>
+        </div>
+
+        <footer>
+            <h5 class="text-opacity center-text">A-Team (C) 2019</h5>
+        </footer>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Not needed yet --> <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+
+
+
+    </body>
+</html>
