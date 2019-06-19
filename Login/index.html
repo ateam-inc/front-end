@@ -18,6 +18,18 @@
             */
 
             /* Social buttons */
+            .btn-social {
+                width: 100%;
+                padding: 12px;
+                border: none;
+                border-radius: 4px;
+                margin: 5px 0;
+                opacity: 0.85;
+                display: inline-block;
+                font-size: 17px;
+                line-height: 20px;
+                text-decoration: none; /* remove underline from anchors */
+            }
             .fb {
                 background-color: #3B5998;
                 color: white;
@@ -196,17 +208,17 @@
                         <!-- Social Content -->
                         <div class="center-text">
                             <h4 class="text-opacity"> Why be old fashioned? Just sign in with: </h4><br>
-                            <a href="#" class="fb btn">
+                            <a href="#" class="fb btn-social">
                                 <i class="fa fa-facebook fa-fw"></i> Login with Facebook
                             </a>
-                            <a href="#" class="twitter btn">
+                            <a href="#" class="twitter btn-social">
                                 <i class="fa fa-twitter fa-fw"></i> Login with Twitter
                             </a>
                         </div>
                     </div>
 
                     
-                    <p><hr></p>
+                    <hr>
                     
 
                     <!-- Email Content -->
@@ -225,7 +237,6 @@
 
                             <h5 class="text-opacity">By submitting this form you agree to <em> A-Team </em> <a href="#"> Terms and service </a></h5>
                             <button type="button" class="btn btn-secondary btn-lg">Login to A-Team</button>
-
                         </form>
                     </div>
 
@@ -310,245 +321,6 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- Not needed yet --> <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
-		
-
-
-
-    </body>
-</html>
-                opacity: 0.5;
-            }
-
-            /* Just going to stick with keeping everything in the center */
-            .center-text
-            {
-                margin: 0px auto;
-                text-align: center;
-            }
-
-            /* This will keep the Social Login Stuff on the left */
-            .left-text
-            {
-                /*text-align: left;*/
-                margin-right: 65%;
-            }
-
-            /* This will keep the Email Login on the right */
-            .right-text
-            {
-                margin-left: 65%;
-            }
-
-        </style>
-
-        <style>
-            /*
-                Pulled from: http://cssdeck.com/labs/jwmv3hsv 
-            */
-
-            @import url(http://weloveiconfonts.com/api/?family=fontawesome);
-            @import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
-
-            [class*="fontawesome-"]:before {
-                font-family: 'FontAwesome', sans-serif;
-            }
-            .facebook {
-                background-color: #0079ce;
-                border: none;
-                border-radius: 0px 3px 3px 0px;
-                -moz-border-radius: 0px 3px 3px 0px;
-                -webkit-border-radius: 0px 3px 3px 0px;
-                color: #f4f4f4;
-                cursor: pointer;
-                height: 50px;
-                text-transform: uppercase;
-                width: 300px;
-            }
-            .twitter {
-                background-color: #1bb2e9;
-                border: none;
-                border-radius: 0px 3px 3px 0px;
-                -moz-border-radius: 0px 3px 3px 0px;
-                -webkit-border-radius: 0px 3px 3px 0px;
-                color: #f4f4f4;
-                cursor: pointer;
-                height: 50px;
-                text-transform: uppercase;
-                width: 300px;
-            }
-        </style>
-
-        <style>
-            /*
-                Dedicated for the Signup Section
-                Written 13/6/2019
-            */
-
-            /* Background */
-            .signup-modal
-            {
-                display: none; /* Default as hidden */
-                position: fixed; /* One place */
-                z-index: 1; /* Sits on top */
-                padding-top: 100px; /* Location of the box */
-                left: 0;
-                top: 0;
-                width: 100%; /* Width should be full */
-                height: 100%; /* Height should be full */
-                overflow: auto; /* Autoenable scroll */
-                background-color: rgba(0, 0, 0, 1); /* Fallback colour */
-                background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-            }
-
-            /* Signup Content */
-            .signup-modal-content
-            {
-                background-color: #fefefe;
-                margin: auto;
-                padding: 20px;
-                border: 1px solid #888;
-                width: 80%;
-            }
-
-            /* The Close Button */
-            .signup-modal-close
-            {
-                color: #aaaaaa;
-                float: right;
-                font-size: 30px;
-                font-weight: bold;
-            }
-
-            .signup-modal-close:hover, .signup-modal-close:focus
-            {
-                color: #000;
-                text-decoration: none;
-                cursor: pointer;
-            }
-        </style>
-    </head>
-
-    <body>
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
-
-        <div class="card ">
-            <div class="card-body">
-                <h1 class="text-opacity"> Login & Registration </h1>
-                <h4>Come join the <em>A-Team</em> community! Let's set up your account. Already have one? <a href="#"> Sign in here. </a> </h4>
-                <hr>
-
-                <!-- Social Content -->
-                <div class="center-text">
-                    <h3 class="text-opacity"> Why be old fashioned? Just sign in with: </h3><br>
-
-                    <!--<div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div> --> <!-- Button for login with facebook-->
-                    <button class="facebook"><span class="fontawesome-facebook"></span> Login Using Facbook</button></p>
-                    <button class="twitter"><span class="fontawesome-twitter"></span> Login Using Twitter</button></p>
-                </div>
-
-                
-                <p><hr></p>
-                
-
-                <!-- Email Content -->
-                <h3 class="text-opacity center-text"> Have an account? </h3><br>
-                <form action="#" method="POST">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" required name="user" placeholder="Username or Email" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend"></div>
-                        <input type="password" class="form-control" required name="pass" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
-                    </div>
-
-                    <h5 class="text-opacity">By submitting this form you agree to <em> A-Team </em> <a href="#"> Terms and service </a></h5>
-                    <button type="button" class="btn btn-secondary btn-lg">Login to A-Team</button>
-
-                </form>
-
-                <br><br>
-                <h6 class="text-opacity"> Don't have an account do you? No worries! Create one<button id="signup-button" class="btn default">here</button> </h6>
-            </div>
-        </div>
-
-        <!-- Register a new account -->
-
-        <div id="signup-modal-id" class="signup-modal">
-            <div class="signup-modal-content">
-                <span class="signup-modal-close">&times;</span>
-
-                <h3 class="text-opacity center-text"> Register a new account today! </h3><br>
-                <form action="#" method="POST">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend"></div>
-                        <input type="text" class="form-control" required name="user" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-    
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend"></div>
-                        <input type="email" class="form-control" required name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
-                    </div>
-    
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend"></div>
-                        <input type="password" class="form-control" required name="pass" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend"></div>
-                        <input type="password" class="form-control" required name="pass" placeholder="Confirm Password" aria-label="Password" aria-describedby="basic-addon1">
-                    </div>
-    
-                    <h5 class="text-opacity center-text">
-                        By submitting this form you agree to 
-                        <em> A-Team </em> 
-                        <a href="#"> Terms and service </a> <br><br>
-                        <button type="button" class="btn btn-secondary btn-lg">Join A-Team</button>
-                    </h5>
-                    
-                </form>
-
-            </div>
-        </div>
-
-        <script>
-            // Get the Signup Modal
-            var signup_modal = document.getElementById("signup-modal-id");
-
-            // Get the button that opens the signup modal
-            var signup_btn = document.getElementById("signup-button");
-
-            // Get the <span> element that closes the signup modal
-            var signup_span = document.getElementsByClassName("signup-modal-close")[0];
-
-            // When the user clicks the button, open the signup modal 
-            signup_btn.onclick = function() {
-                signup_modal.style.display = "block";
-            }
-
-            // When the user clicks on <span> (x), close the signup modal
-            signup_span.onclick = function() {
-                signup_modal.style.display = "none";
-            }
-
-            // When the user clicks anywhere outside of the signup modal, close it
-            window.onclick = function(event) {
-                if (event.target == signup_modal) {
-                    signup_modal.style.display = "none";
-                }
-            }
-        </script>
-        <footer>
-            <h5 class="text-opacity center-text">A-Team (C) 2019</h5>
-        </footer>
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
-        <!-- Not needed yet --> <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
         <!-- Not needed yet --> <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
 		
 
