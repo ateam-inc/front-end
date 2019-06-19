@@ -17,14 +17,40 @@
                 Code written by Oladeji Sanyaolu - Login css
             */
 
-            body
-            {
-                background-color: rgba(58, 56, 56, 0.5);
+            /* Social buttons */
+            .fb {
+                background-color: #3B5998;
+                color: white;
+                width:320px;
             }
-            hr
-            { 
+
+            .twitter {
+                background-color: #55ACEE;
+                color: white;
+                margin-top: 5%;
+                width:320px;
+            }
+
+            /* Two-column layout */
+            .col {
+                float: left;
+                width: 50%;
+                margin: auto;
+                padding: 0 50px;
+                margin-top: 6px;
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            /* Horizontal line */
+            hr { 
                 height: 100%;
-                display: block;
+                display: none;
                 margin-top: auto;
                 margin-bottom: auto;
                 margin-left: 0.5em;
@@ -33,21 +59,264 @@
                 border-width: 1px;
             }
 
-            .card
-            {
-                width:70%;
+            /* Vertical line */
+            .vl {
+                position: absolute;
+                left: 49%;
+                transform: translate(-50%);
+                border: 1px solid rgb(248, 248, 248);
+                height: 250px;
+            }
+
+            /* Vertical line text */
+            .vl-text {
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #f1f1f1;
+                border: 1px solid rgb(255, 255, 255);
+                border-radius: 50%;
+                padding: 8px 10px;
+            }
+
+            .card {
+                width:60%;
                 margin:10% auto;
                 display: inline-block;
             }
 
-            .card-body
-            {
+            .card-body {
                 text-align: center;
                 display: inline-block;
             }
 
-            .text-opacity
+            .text-opacity {
+                opacity: 0.5;
+            }
+
+            /* Just going to stick with keeping everything in the center */
+            .center-text {
+                margin: 0px auto;
+                text-align: center;
+            }
+
+            /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 800px) {
+                .col {
+                    width: 101%;
+                    margin-top: 0;
+                }
+
+                /* Veritcal line should be hidden */
+                .vl {
+                    display: none;
+                }
+
+                /* Horizontal line should show */
+                hr {
+                    display: block;
+                }
+            }
+
+        </style>
+
+        <style>
+            /*
+                Dedicated for the Signup Section
+                Written 13/6/2019
+            */
+
+            /* Background */
+            .signup-modal
             {
+                display: none; /* Default as hidden */
+                position: fixed; /* One place */
+                z-index: 1; /* Sits on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Width should be full */
+                height: 100%; /* Height should be full */
+                overflow: auto; /* Autoenable scroll */
+                background-color: rgba(0, 0, 0, 1); /* Fallback colour */
+                background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+            }
+
+            /* Signup Content */
+            .signup-modal-content
+            {
+                background-color: #fefefe;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+            }
+
+            /* The Close Button */
+            .signup-modal-close
+            {
+                color: #aaaaaa;
+                float: right;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .signup-modal-close:hover, .signup-modal-close:focus
+            {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="card">
+            
+            <div class="card-body">
+
+                <div>
+                    <h1 class="text-opacity"> Login & Registration </h1>
+                    <h4>
+                        Come join the 
+                        <em> A-Team </em> 
+                        community! Let's set up your account. 
+                    </h4>
+                </div>
+
+                <div class="vl">
+                    <span class="vl-text">or</span>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+
+                        <hr>
+
+                        <!-- Social Content -->
+                        <div class="center-text">
+                            <h4 class="text-opacity"> Why be old fashioned? Just sign in with: </h4><br>
+                            <a href="#" class="fb btn">
+                                <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                            </a>
+                            <a href="#" class="twitter btn">
+                                <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                    <p><hr></p>
+                    
+
+                    <!-- Email Content -->
+                    <div class="col">
+                        <h4 class="text-opacity center-text"> Have an account? </h4><br>
+                        <form action="#" method="POST">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend"></div>
+                                <input type="text" class="form-control" name="user" placeholder="Username or Email" aria-label="Username" aria-describedby="basic-addon1" required>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend"></div>
+                                <input type="password" class="form-control" name="pass" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
+                            </div>
+
+                            <h5 class="text-opacity">By submitting this form you agree to <em> A-Team </em> <a href="#"> Terms and service </a></h5>
+                            <button type="button" class="btn btn-secondary btn-lg">Login to A-Team</button>
+
+                        </form>
+                    </div>
+
+                    <br><br>
+                    
+                </div>
+                <h6 class="text-opacity"> Don't have an account do you? No worries! Create one<button id="signup-button" class="btn default">here</button> </h6>
+            </div>
+
+        <!-- Register a new account -->
+
+        
+        <div id="signup-modal-id" class="signup-modal">
+            <div class="signup-modal-content">
+                <span class="signup-modal-close">&times;</span>
+
+                <h3 class="text-opacity center-text"> Register a new account today! </h3><br>
+                <form action="#" method="POST">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend"></div>
+                        <input type="text" class="form-control" required name="user" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend"></div>
+                        <input type="email" class="form-control" required name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+                    </div>
+    
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend"></div>
+                        <input type="password" class="form-control" required name="pass" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend"></div>
+                        <input type="password" class="form-control" required name="pass" placeholder="Confirm Password" aria-label="Password" aria-describedby="basic-addon1">
+                    </div>
+    
+                    <h5 class="text-opacity center-text">
+                        By submitting this form you agree to 
+                        <em> A-Team </em> 
+                        <a href="#"> Terms and service </a> <br><br>
+                        <button type="button" class="btn btn-secondary btn-lg">Join A-Team</button>
+                    </h5>
+                    
+                </form>
+
+            </div>
+        </div>
+
+        <script>
+            // Get the Signup Modal
+            var signup_modal = document.getElementById("signup-modal-id");
+
+            // Get the button that opens the signup modal
+            var signup_btn = document.getElementById("signup-button");
+
+            // Get the <span> element that closes the signup modal
+            var signup_span = document.getElementsByClassName("signup-modal-close")[0];
+
+            // When the user clicks the button, open the signup modal 
+            signup_btn.onclick = function() {
+                signup_modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the signup modal
+            signup_span.onclick = function() {
+                signup_modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the signup modal, close it
+            window.onclick = function(event) {
+                if (event.target == signup_modal) {
+                    signup_modal.style.display = "none";
+                }
+            }
+        </script>
+        <footer>
+            <h5 class="text-opacity center-text">A-Team (C) 2019</h5>
+        </footer>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Not needed yet --> <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+		
+
+
+
+    </body>
+</html>
                 opacity: 0.5;
             }
 
